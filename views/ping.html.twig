@@ -6,8 +6,12 @@
 </head>
 <body>
     <div class='container'>
-        <h1>Here's your output</h1>
-        <p></p>
+        <h1>Here's your output:</h1>
+        <ul>
+        {% for ping in pings %}
+        <li> {{ ping.printOutput }} </li>
+        {% endfor %}
+        </ul>
         <form action='/'>
             <button type='submit' class='btn-success'>Return home</button>
         </form>
